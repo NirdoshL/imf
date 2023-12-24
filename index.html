@@ -11,8 +11,24 @@
       <link rel="stylesheet" href="./src/assets/css/style.css" />
       <title>IMF | Home</title>
    </head>
-   <body class="overflow-x-hidden">
-      <header class="bg-white">
+   <body class="overflow-x-hidden md:relative">
+  
+       <div id="modal" aria-hidden="true" class="fixed top-0 left-0 z-[60] h-screen w-full bg-white/45 grid place-items-center">
+             <div class="bg-white rounded-lg shadow relative">
+                 <div class="flex justify-end p-2">
+                     <button id="closeModal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="authentication-modal">
+                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                     </button>
+                 </div>
+                 <div class="space-y-6 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                     <h3 class="text-xl font-medium text-gray-900">Notice</h3>
+                     <p>The website is still under maintainance</p>
+                 </div>
+             </div>
+        
+     </div>
+
+      <header class="bg-white md:sticky top-0 left-0 w-full z-50 shadow-sm">
          <div class="pt-2 px-6 w-full md:flex items-center justify-between hidden">
             <div class="flex items-center gap-2 text-gray-500">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
@@ -257,7 +273,7 @@
                            <p
                               class="mt-6 mb-10 text-base leading-7 text-gray-50 "
                               >
-                              At IMF Life Sciences, we embark on a journey driven by a
+                              <span class="font-bold">IMF</span> Life Sciences, here we embark on a journey driven by a
                               profound commitment to enhancing lives through innovative
                               solutions in the realm of life sciences. As a pioneering force
                               in the industry, we specialize in crafting exceptional products,
@@ -313,7 +329,7 @@
          <div class="carousel"></div>
       </section>
       <section class="w-full bg-blue-400 relative">
-         <svg class="hidden md:block w-52 h-52 absolute top-64 -left-11" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+         <svg class="hidden md:block w-52 h-52 absolute top-64 sm:-left-32 md:-left-20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="layer1">
                <path d="M 10 1.7363281 L 3.3105469 4.9589844 L 1.6601562 12.195312 L 6.2890625 18 L 13.710938 18 L 18.339844 12.195312 L 16.689453 4.9589844 L 10 1.7363281 z M 10 2.8457031 L 15.820312 5.6503906 L 17.257812 11.949219 L 13.230469 17 L 6.7695312 17 L 2.7421875 11.949219 L 4.1796875 5.6503906 L 10 2.8457031 z " style="fill:#e5e7eb; fill-opacity:1; stroke:none; stroke-width:0px;"/>
             </g>
@@ -408,7 +424,8 @@
             </svg>
          </div>
       </section>
-      <section class="max-w-6xl mx-auto relative">
+
+      <!-- <section class="max-w-6xl mx-auto relative">
          <svg class="hidden md:block w-16 h-16 absolute top-11 left-3" viewBox="0 0 87 96" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.69684 44.1966C4.49684 45.4966 2.39687 45.6967 1.09687 44.4967C-0.203134 43.2967 -0.403183 41.1966 0.796817 39.8966C1.99682 38.5966 4.09685 38.3966 5.39685 39.5966C6.69685 40.7966 6.89684 42.7966 5.69684 44.1966Z" fill="currentColor"></path>
             <path d="M5.69684 44.1966C4.49684 45.4966 2.39687 45.6967 1.09687 44.4967C-0.203134 43.2967 -0.403183 41.1966 0.796817 39.8966C1.99682 38.5966 4.09685 38.3966 5.39685 39.5966C6.69685 40.7966 6.89684 42.7966 5.69684 44.1966Z" fill="currentColor" fill-opacity="0.2"></path>
@@ -683,7 +700,80 @@
                </blockquote>
             </div>
          </div>
-      </section>
+      </section> -->
+
+<section class="max-w-6xl w-full mx-auto pb-8 pt-12">
+
+   <div>
+      <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-9">
+         Read trusted reviews from our customers
+      </h2>
+      <div class="flex flex-col md:flex-row items-center md:gap-4 md:justify-evenly bg-gray-100 px-4 py-8 rounded-lg">
+         <img src="./src/assets/img/user-blank.png" class="w-40 h-40" rou alt="">
+         <div class="max-w-xl w-full mx-auto">
+            <div class="max-w-md w-full mx-auto flex items-center gap-4">
+               <div class="flex flex-col items-center">
+                  <div class="flex justify-center gap-0.5 text-green-500">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                           d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                           />
+                     </svg>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                           d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                           />
+                     </svg>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                           d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                           />
+                     </svg>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                           d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                           />
+                     </svg>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        >
+                        <path
+                           d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                           />
+                     </svg>
+                  </div>
+                  <h4 class="text-xl">We are still waiting for our customers to review</h4>
+               </div>
+            </div>
+      </div>
+      </div>
+   </div>
+
+</section>
+      
       <footer class="bg-blue-400 text-white mt-11">
          <svg
             class="footer-wave-svg"
@@ -735,7 +825,7 @@
                                        <a href="#">Privacy Policy</a>
                                        <a href="#">Terms of use</a>
                                      </div>
-                                     <div class="flex flex-col items-start gap-2">
+                                     <div class="flex flex-col items-center gap-2">
                                        <div class="flex flex-col">
                                           <div class="flex items-center gap-2">
                                              <h6 class="text-2xl font-semibold">For any queries</h6>
@@ -765,7 +855,7 @@
                                                   </div>
                                           </div>
 
-                                          <div class="flex items-center gap-3">
+                                          <div class="flex items-center gap-4 mt-2">
 
                                              <a href="https://www.facebook.com/" target="_blank">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -794,12 +884,13 @@
          <div class="bg-blue-400 text-white py-4 text-center">
             <div class="max-w-xl mx-auto">
                <p>
-                  ©2023. All rights reserved  <a href="#" target="_blank"></a>IMFlifesciences.com.np</a>
+                  ©2023. All rights reserved  <a href="#" target="_blank"></a>imflifesciences.com.np</a>
                </p>
             </div>
          </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="./src/assets/js/modal.js"></script>
       <script src="./src/assets/js/script.js"></script>
       <script src="./src/assets/js/swiper.js"></script>
    </body>
